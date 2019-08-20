@@ -29,5 +29,19 @@ RSpec.describe User do
       it_behaves_like '大人のあいさつ'
     end
   end
-end
 
+  describe '#child?' do
+    let(:user) { User.new(name: 'たろう', age: age) }
+    subject { user.child? }
+
+    context '12歳以下の場合' do
+      let(:age) { 12 }
+      it { is_expected.to eq true }
+    end
+
+    context '13歳以下の場合' do
+      let(:age) { 13 }
+      it { is_expected.to eq false }
+    end
+  end
+end
