@@ -17,4 +17,9 @@ class User
       "僕は#{@name}です。"
     end
   end
+
+  def child?
+    @age <= 12
+  end
 end
+
