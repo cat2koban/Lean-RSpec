@@ -1,2 +1,8 @@
+# for vim
 *.swp
+
+# for macOS
 .DS_Store
+
+# for VSCode
+.vscode
